@@ -1,0 +1,115 @@
+.hero {
+  display: block;
+  position: relative;
+  background-color: var(--green-light);
+  height: 100vh;
+  max-height: 593px;
+
+  .leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 412px;
+    z-index: 2;
+  }
+
+  .plantperson {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 85%;
+    max-height: 234px;
+    z-index: 1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+  }
+
+  .logo {
+    width: 163px;
+    margin: 2rem 0;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
+  .arrow {
+    width: 35px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
+
+// Mobile Landscape
+@media (orientation: landscape) and (max-width: 812px) {
+  .hero {
+    max-height: 350px;
+
+    .leaves {
+      max-height: 100%;
+    }
+
+    .plantperson {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 812px) {
+  .hero {
+    height: auto;
+
+    .content {
+      padding: 3rem 0;
+    }
+
+    .left-leaves {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .center-plantperson {
+      position: absolute;
+      top: 0;
+      right: 22.5%;
+      width: 25%;
+      height: 100%;
+    }
+
+    .right-leaves {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25%;
+      height: 100%;
+    }
+
+    .logo {
+      width: 209px;
+      margin-top: 0;
+    }
+
+    .title {
+      font-size: 4.4rem;
+    }
+
+    .arrow {
+      width: 40px;
+      margin-top: 1.5rem;
+    }
+  }
+}
