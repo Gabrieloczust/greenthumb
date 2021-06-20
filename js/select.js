@@ -28,10 +28,15 @@ options.map((option) => {
       }
     });
 
-    const valueElement = option.parentNode.parentNode.firstElementChild;
+    const input = option.parentNode.parentNode.querySelector("input");
+    const valueElement = option.parentNode.parentNode.querySelector(".value");
     const optionText = option.innerText;
+    const optionValue = option.getAttribute("value");
 
+    input.value = optionValue;
     valueElement.innerText = optionText;
+
+    window.filterChange();
   });
 });
 

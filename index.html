@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/filters.scss" />
     <link rel="stylesheet" href="./styles/select.scss" />
     <link rel="stylesheet" href="./styles/empty.scss" />
-    <link rel="stylesheet" href="./styles/picks.scss" />
+    <link rel="stylesheet" href="./styles/plants.scss" />
 
     <script type="text/javascript" src="./js/scroll.js"></script>
   </head>
@@ -102,10 +102,12 @@
               <div class="arrow"></div>
 
               <div class="options">
-                <div class="option">No sunlight</div>
-                <div class="option">Low sunlight</div>
-                <div class="option">High sunlight</div>
+                <div class="option" value="no">No sunlight</div>
+                <div class="option" value="low">Low sunlight</div>
+                <div class="option" value="high">High sunlight</div>
               </div>
+
+              <input type="hidden" name="sun" value="" />
             </div>
           </div>
 
@@ -130,10 +132,12 @@
               <div class="arrow"></div>
 
               <div class="options">
-                <div class="option">Rearely</div>
-                <div class="option">Regulaly</div>
-                <div class="option">Daily</div>
+                <div class="option" value="rarely">Rarely</div>
+                <div class="option" value="regularly">Regulaly</div>
+                <div class="option" value="daily">Daily</div>
               </div>
+
+              <input type="hidden" name="water" value="" />
             </div>
           </div>
 
@@ -158,16 +162,18 @@
               <div class="arrow"></div>
 
               <div class="options">
-                <div class="option">No/They don't care</div>
-                <div class="option">Yes</div>
+                <div class="option" value="false">No/They don't care</div>
+                <div class="option" value="true">Yes</div>
               </div>
+
+              <input type="hidden" name="pets" value="" />
             </div>
           </div>
         </div>
       </div>
     </main>
 
-    <section class="empty">
+    <section class="empty" id="empty">
       <div class="container">
         <div class="content">
           <div class="text">
@@ -184,7 +190,7 @@
       </div>
     </section>
 
-    <section class="picks" style="display: none">
+    <section class="plants" id="plants" style="display: none">
       <div class="container">
         <div class="content">
           <div class="title">
@@ -195,152 +201,7 @@
             </h2>
           </div>
 
-          <div class="cards">
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-            <div class="card">
-              <div class="body">
-                <img src="images/plants/bunny-ears-cacti.jpg" alt="plant" />
-              </div>
-
-              <h3 class="name">Ponytail palm</h3>
-
-              <footer class="footer">
-                <b>$50</b>
-                <div class="icons">
-                  <img src="images/icons/pet.svg" alt="pet" />
-                  <img src="images/icons/low-sun.svg" alt="low sun" />
-                  <img src="images/icons/2-drops.svg" alt="two drops" />
-                </div>
-              </footer>
-            </div>
-          </div>
+          <div class="cards" id="cards"></div>
 
           <div class="button" title="back to the top" onclick="scrollToTop()">
             <img src="images/icons/arrow-up.svg" alt="arrow up" />
@@ -350,6 +211,7 @@
       </div>
     </section>
 
+    <script type="text/javascript" src="./js/filters.js"></script>
     <script type="text/javascript" src="./js/select.js"></script>
   </body>
 </html>
