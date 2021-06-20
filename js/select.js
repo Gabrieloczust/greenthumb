@@ -6,13 +6,13 @@ closeAllSelects = () =>
 
 selects.map((select) => {
   select.addEventListener("click", (event) => {
+    const isOpen =
+      event.target.className.includes("open") ||
+      event.path[1].className.includes("open");
+
     closeAllSelects();
 
-    const isOpen = event.target.className.includes("open");
-
-    if (isOpen) {
-      select.classList.remove("open");
-    } else {
+    if (!isOpen) {
       select.classList.add("open");
     }
   });
