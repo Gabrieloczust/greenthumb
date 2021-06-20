@@ -48,11 +48,9 @@
     margin-top: 1rem;
     cursor: pointer;
   }
-}
 
-// Mobile Landscape
-@media (orientation: landscape) and (max-width: 812px) {
-  .hero {
+  // Mobile Landscape
+  @media (orientation: landscape) and (max-width: 812px) {
     max-height: 350px;
 
     .leaves {
@@ -63,10 +61,8 @@
       display: none;
     }
   }
-}
 
-@media (min-width: 812px) {
-  .hero {
+  @media (min-width: 812px) {
     height: auto;
 
     .content {

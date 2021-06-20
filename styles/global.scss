@@ -2,7 +2,12 @@
   --green: #15573f;
   --green-light: #75bc97;
   --orange: #fd9872;
+
   --white: #ffffff;
+  --text: #848484;
+
+  --select: #a8a8a8;
+  --select-hover: #efefef;
 }
 
 * {
@@ -46,7 +51,7 @@ h1 {
   .desktop {
     display: block;
   }
-  
+
   .mobile {
     display: none;
   }

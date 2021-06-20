@@ -1,0 +1,78 @@
+.select {
+  width: 250px;
+  border-radius: 1rem;
+  height: 40px;
+  border: 1px solid var(--select);
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  color: var(--select);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+
+  &.open {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+
+    .options {
+      display: block;
+    }
+  }
+
+  .arrow {
+    background: url("../images/icons/select-arrow.svg") no-repeat center;
+    background-size: contain;
+    width: 18px;
+    height: 15px;
+    cursor: pointer;
+  }
+
+  .options {
+    display: none;
+    width: calc(100% + 2px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-1px, 100%);
+    border: 1px solid var(--select);
+    border-top: 0;
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+
+    .option {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+
+      &:hover {
+        background-color: var(--select-hover);
+      }
+
+      &.selected {
+        background-color: var(--green-light);
+        color: var(--white);
+
+        &:hover {
+          background-color: var(--select-hover);
+          color: var(--green-light);
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 0 1rem 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 812px) {
+    width: 220px;
+  }
+}
