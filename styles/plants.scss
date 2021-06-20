@@ -52,7 +52,7 @@
           img {
             display: block;
             margin: 0 auto;
-            max-width: 100%;
+            max-width: 80%;
           }
         }
 
@@ -139,7 +139,7 @@
           min-width: initial;
           max-width: initial;
 
-          &:first-child {
+          &.many:first-child {
             flex-direction: row;
             flex-wrap: wrap;
             align-items: flex-end;

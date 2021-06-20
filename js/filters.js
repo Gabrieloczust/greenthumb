@@ -8,8 +8,7 @@ const getPlants = (sun, water, pets) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      if (data.length === 0) return setEmptyElement();
-
+      if (!data?.length) return setEmptyElement();
       setPlants(data);
     });
 };
@@ -36,24 +35,24 @@ const setPlants = (plants) => {
   emptyElement.style.display = "none";
   plantsElement.style.display = "block";
 
-  console.log(plants);
-
-  plants.map((plant) =>
-    cardsElement.insertAdjacentHTML("beforeend", cardElement(plant))
-  );
+  plants
+    .reverse()
+    .map((plant) =>
+      cardsElement.insertAdjacentHTML(
+        "beforeend",
+        cardElement(plant, plants.length)
+      )
+    );
 };
 
-const cardElement = ({
-  url,
-  name,
-  price,
-  staff_favorite,
-  toxicity,
-  sun,
-  water,
-}) => {
+const cardElement = (
+  { url, name, price, staff_favorite, toxicity, sun, water },
+  plantsLength
+) => {
+  const styleGrid = plantsLength > 3 ? "many" : "";
+
   return `
-    <div class="card">
+    <div class="card ${styleGrid}">
       <div class="body">
         <img src="${url}" alt="${name}" />
       </div>
