@@ -47,6 +47,10 @@
     width: 35px;
     margin-top: 1rem;
     cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   // Mobile Landscape

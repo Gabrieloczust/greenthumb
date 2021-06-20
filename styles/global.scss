@@ -1,6 +1,7 @@
 :root {
   --green: #15573f;
   --green-light: #75bc97;
+  --green-dark: #0c261c;
   --orange: #fd9872;
 
   --white: #ffffff;
@@ -10,7 +11,13 @@
   --select: #a8a8a8;
   --select-hover: #efefef;
 
-  --empty: #F6F6F6;
+  --background: #f6f6f6;
+
+  --button-border: #15573F;
+  --button-text: #196146;
+
+  --card-name: #1E6B4E;
+  --card-price: #257556;
 }
 
 * {
@@ -26,7 +33,12 @@ body {
 
 b,
 strong,
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
