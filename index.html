@@ -2,18 +2,23 @@
 <html lang="pt-br">
   <head>
     <title>Front End Test - Greenthumb</title>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./styles/global.scss" />
     <link rel="stylesheet" href="./styles/hero.scss" />
     <link rel="stylesheet" href="./styles/filters.scss" />
     <link rel="stylesheet" href="./styles/select.scss" />
     <link rel="stylesheet" href="./styles/empty.scss" />
     <link rel="stylesheet" href="./styles/picks.scss" />
+
+    <script type="text/javascript" src="./js/scroll.js"></script>
   </head>
 
   <body>
@@ -67,6 +72,7 @@
             src="images/icons/arrow-down.svg"
             alt="arrow down"
             title="find you next green friend"
+            onclick="scrollToFilter()"
           />
         </div>
       </div>
@@ -161,6 +167,7 @@
         </div>
       </div>
     </main>
+
     <!-- 
     <section class="empty">
       <div class="container">
@@ -337,7 +344,7 @@
             </div>
           </div>
 
-          <div class="button" title="back to the top">
+          <div class="button" title="back to the top" onclick="scrollToTop()">
             <img src="images/icons/arrow-up.svg" alt="arrow up" />
             <span>back to the top</span>
           </div>
