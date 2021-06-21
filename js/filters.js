@@ -8,8 +8,9 @@ const getPlants = (sun, water, pets) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      if (!data?.length) return setEmptyElement();
-      setPlants(data);
+      if (data && data.length > 0) return setPlants(data);
+
+      setEmptyElement();
     });
 };
 
